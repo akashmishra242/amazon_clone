@@ -2,6 +2,8 @@
 
 In this Flutter Project implementation of Amazon like android application will be done which will be an E-commerce as well as OTT based entertainment platform using Node.js as backend, MongoDB as database and Riverpod as state management and dependency injection.
 
+Application will include online shopping, copyright free music, OTT content streaming as well as Live concert facility.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
