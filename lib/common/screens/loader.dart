@@ -6,7 +6,7 @@ class Loader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: GlobalVariables.greyBackgroundCOlor,
       body: Center(
         child: CircularProgressIndicator(

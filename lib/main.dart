@@ -44,38 +44,34 @@ class _MyAppState extends ConsumerState<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Amazon Clone',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          scaffoldBackgroundColor: GlobalVariables.backgroundColor,
-          colorScheme:
-              const ColorScheme.light(primary: GlobalVariables.secondaryColor),
-          appBarTheme: const AppBarTheme(
-            elevation: 0,
-            iconTheme: IconThemeData(
-              color: Colors.black,
-            ),
+      title: 'Amazon Clone',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: GlobalVariables.backgroundColor,
+        colorScheme:
+            const ColorScheme.light(primary: GlobalVariables.secondaryColor),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          iconTheme: IconThemeData(
+            color: Colors.black,
           ),
         ),
-        onGenerateRoute: (settings) => generateRoute(settings),
-        home: userid == ''
-            ? const LoginScreen()
-            : ref.watch(authControllerGetUsetDetails).when(
-                data: (data) {
-                  if (data!.userid != null) {
-                    return data.token == token
-                        ? const LandingScreen()
-                        : const LoginScreen();
-                  } else {
-                    return const LoginScreen();
-                  }
-                },
-                error: (error, stackTrace) {
-                  return ErrorScreen(error: error.toString());
-                },
-                loading: () {
-                  return const Loader();
-                },
-              ));
+      ),
+      onGenerateRoute: (settings) => generateRoute(settings),
+      home: userid == ''
+          ? const LoginScreen()
+          : ref.watch(authControllerGetUsetDetails).when(
+              data: (data) {
+                return const LandingScreen();
+              },
+              error: (error, stackTrace) {
+                return ErrorScreen(error: error.toString());
+              },
+              loading: () {
+                return const Loader();
+              },
+            ),
+      // home: const LoginScreen(),
+    );
   }
 }

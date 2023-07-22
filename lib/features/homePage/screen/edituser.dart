@@ -151,7 +151,7 @@ class _EditUserDetailsState extends ConsumerState<EditUserDetails> {
         actions: const [],
         toolbarHeight: MediaQuery.of(context).size.height * 0.08,
         flexibleSpace: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: GlobalVariables.otherAppBarGradient,
           ),
           child: Stack(
@@ -173,13 +173,12 @@ class _EditUserDetailsState extends ConsumerState<EditUserDetails> {
         child: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 0),
-            decoration:
-                const BoxDecoration(color: GlobalVariables.backgroundColor),
+            decoration: BoxDecoration(color: GlobalVariables.backgroundColor),
             child: Column(
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 8, bottom: 8, left: 16),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       gradient: GlobalVariables.otherAppBarGradient),
                   child: Row(
                     children: const [

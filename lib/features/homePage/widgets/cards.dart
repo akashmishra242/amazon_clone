@@ -24,6 +24,7 @@ class _CustomCardsState extends State<CustomCards> {
       ));
 
   var list2 = GlobalVariables.cardWidgetsForHomeScreen.map((e) => e);
+  // var list2 = GlobalVariables.categoryImages.map((e) => e);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,10 @@ class _CustomCardsState extends State<CustomCards> {
           borderRadius: BorderRadius.all(Radius.circular(15)),
         ),
         child: list2.elementAt(widget.index!),
+        // child: list.elementAt(widget.index!),
+        // child: const Icon(Icons.textsms_outlined),
       ),
     );
   }
 }
+// 

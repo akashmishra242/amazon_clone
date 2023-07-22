@@ -1,5 +1,5 @@
 import 'package:amazon_clone/features/admin/screens/admin_screen.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as bg;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -125,7 +125,7 @@ class _LandingScreenState extends ConsumerState<LandingScreen> {
                   ),
                 ),
               ),
-              child: Badge(
+              child: bg.Badge(
                 badgeContent: const Text(
                   '0',
                   style: TextStyle(fontWeight: FontWeight.bold),

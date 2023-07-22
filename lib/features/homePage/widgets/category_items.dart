@@ -35,12 +35,13 @@ class CategoryHomePageItems extends StatelessWidget {
                   },
                   backgroundImage: Image.asset(
                     imageurl,
+                    // 'assets/images/alexa_icon.png',
                     fit: BoxFit.cover,
                   ).image,
                 ),
                 Text(
                   title,
-                  style: Theme.of(context).textTheme.caption,
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],
             ),

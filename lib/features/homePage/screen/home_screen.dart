@@ -112,21 +112,20 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       borderRadius: const BorderRadius.all(Radius.circular(12)),
                       border: Border.all(
                           color: Colors.grey.shade300,
-                          strokeAlign: StrokeAlign.inside),
+                          strokeAlign: BorderSide.strokeAlignInside),
                     ),
                     child: TextFormField(
                       decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Search Codexveer.com',
-                          prefixIcon: IconButton(
+                        border: InputBorder.none,
+                        hintText: 'Search Codexveer.com',
+                        prefixIcon: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.search),
+                        ),
+                        suffixIcon: IconButton(
                             onPressed: () {},
-                            icon: const Icon(Icons.search),
-                          ),
-                          suffixIcon: IconButton(
-                            onPressed: () {},
-                            icon: const ImageIcon(
-                                AssetImage('assets/images/lens.png')),
-                          )),
+                            icon: const Icon(Icons.qr_code_scanner)),
+                      ),
                     ),
                   ),
                 ),
@@ -220,6 +219,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           label: const Text('Alexa'),
           icon: Image.asset(
             'assets/images/alexa_icon.png',
+            scale: 5.5,
           ),
           backgroundColor: GlobalVariables.backgroundColor),
     );

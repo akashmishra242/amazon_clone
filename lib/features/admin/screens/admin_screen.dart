@@ -2,7 +2,7 @@ import 'package:amazon_clone/common/widgets/custom_button.dart';
 import 'package:amazon_clone/features/admin/widgets/custom_container_button.dart';
 import 'package:amazon_clone/features/admin/widgets/keepshoping.dart';
 import 'package:amazon_clone/features/admin/widgets/orders.dart';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as bg;
 import 'package:flutter/material.dart';
 
 import '../../../constants/global_app_constants.dart';
@@ -32,7 +32,7 @@ class AdminScreen extends StatelessWidget {
             constraints: const BoxConstraints(
                 maxWidth: kMinInteractiveDimension, minWidth: 42),
             onPressed: () {},
-            icon: Badge(child: const Icon(Icons.notifications, size: 30)),
+            icon: bg.Badge(child: const Icon(Icons.notifications, size: 30)),
             padding: const EdgeInsets.all(0),
             alignment: Alignment.center,
           ),
@@ -47,17 +47,18 @@ class AdminScreen extends StatelessWidget {
         ],
         toolbarHeight: MediaQuery.of(context).size.height * 0.08,
         flexibleSpace: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: GlobalVariables.otherAppBarGradient,
           ),
           child: Stack(
             alignment: Alignment.bottomLeft,
             children: [
               Positioned(
-                  left: 0,
+                  left: 10,
+                  bottom: 0,
                   child: Image.asset(
                     'assets/images/mylogo_wbg.png',
-                    scale: 5.5,
+                    scale: 2,
                     color: Colors.black,
                   )),
             ],
@@ -70,7 +71,7 @@ class AdminScreen extends StatelessWidget {
             Container(
               height: size.height * 0.072,
               width: double.infinity,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 gradient: GlobalVariables.otherAppBarGradient,
               ),
               child: Stack(
@@ -83,7 +84,7 @@ class AdminScreen extends StatelessWidget {
                       text: TextSpan(
                         text: 'Hello, ',
                         style: TextStyle(
-                            fontSize: 28, color: textTheme.headline6!.color),
+                            fontSize: 28, color: textTheme.titleLarge!.color),
                         children: const <TextSpan>[
                           TextSpan(
                               text: 'Admin',
