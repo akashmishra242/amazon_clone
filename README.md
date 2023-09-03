@@ -1,4 +1,4 @@
-# amazon_clone
+# NebulaCart
 
 In this Flutter Project implementation of Amazon like android application will be done which will be an E-commerce as well as OTT based entertainment platform using Node.js as backend, MongoDB as database and Riverpod as state management and dependency injection.
 
